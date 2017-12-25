@@ -87,6 +87,7 @@ void MainWindow::on_actionClose_File_triggered()
 void MainWindow::on_treeView_clicked(const QModelIndex &index)
 {
   const QModelIndex* selected;
+  qDebug() << index.row();
   if(index.column()!=0) selected = &(index.sibling(index.row(), 0));
   else selected = &index;
 
@@ -189,4 +190,9 @@ void MainWindow::on_actionRemove_Mode_triggered()
 void MainWindow::on_actionAdd_Mode_triggered()
 {
   editMode = EDITMODE_ADD;
+}
+
+void MainWindow::on_treeView_objectNameChanged(const QString &objectName)
+{
+  itemList[nowItem].name=objectName;
 }

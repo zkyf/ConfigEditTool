@@ -21,12 +21,16 @@ public:
   void Clear();
 
   bool config;
+  bool dirty;
+
   QString name;
-  QString fileName;
+  QString originalName;
+  QString folder;
+
   Points points;
   QStringList content;
+
   GestureTreeItem* item;
-  bool dirty;
   GestureTreeItem* col2;
 };
 

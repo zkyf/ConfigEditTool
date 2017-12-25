@@ -15,7 +15,8 @@ void GestureItem::LoadFile(QString fn, bool c)
   }
 
   name = QFileInfo(fn).fileName();
-  fileName = fn;
+  originalName = name;
+  folder = QFileInfo(fn).absolutePath();
   config = c;
   QTextStream in(&file);
   Clear();

@@ -50,6 +50,8 @@ private slots:
 
   void on_actionAdd_Mode_triggered();
 
+  void on_treeView_objectNameChanged(const QString &objectName);
+
 private:
   Ui::MainWindow *ui;
   QStandardItemModel* model;
